@@ -1,38 +1,130 @@
+@font-face {
+  font-family: imported;
+  src: url(./fonts/Simpsonfont.ttf);
+}
+
+#root{
+  font-family: Imported;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #282c34; */
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(40px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+* {
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: url(./assets/Springfield1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* font-family: 'Montserrat', sans-serif; */
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-container {
+  width: auto;
+  max-width: 1000px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.829);
+  z-index: 200;
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2)
+}
+
+.quote-text {
+  font-size: 2.75rem;
+}
+
+.long-quote {
+  font-size: 2rem;
+}
+
+.fa-quote-left {
+  font-size: 4rem;
+}
+
+.quote-author {
+  margin-top: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.button-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.twitter-button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  color: #fff;
+  background: #333;
+  outline: none;
+  padding: 0.5rem 1.8rem;
+  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+}
+
+.quote-button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  color: #333;
+  background: #ffff00;
+  outline: none;
+  padding: 0.5rem 1.8rem;
+  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+}
+
+button:hover {
+  filter: brightness(110%)
+}
+
+button:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+
+.twitter-button:hover {
+  color: #38a1f3;
+}
+
+.fa-twitter {
+  font-size: 1.5rem;
+}
+
+button.quote-button:hover {
+  color: #ffff00;
+  background-color: #333;
+}
+
+.img-simpson-character {
+  /* border-radius: 50%; */
+  max-height: 15rem;
+  max-width: 15rem;
 }
