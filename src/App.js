@@ -22,6 +22,11 @@ const App = () => {
     });
   }
 
+  useEffect(() => {
+    getQuote();
+  }, []);
+  
+
   return (
     <div className="App">
        {/* <div><img src='../src/assets/yellow_logo.png' /></div> */}
@@ -35,10 +40,13 @@ const App = () => {
           {quotes.character}
           <img className='img-simpson-character' src={quotes.image} alt='Simpsons character' />
         </div>
-        <div className="button-container">
-          <button onClick={getQuote} className="twitter-button" id="twitter" title="Tweet this!">
+        <div className="btn-container">
+        <a href={`https://twitter.com/intent/tweet?text=${quotes.text}`}
+          target="_blank"
+          rel="no-opener noreferrer"
+          className='twitter-btn'>
           <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
-          </button>
+          </a>
           <button onClick={getQuote} className='quote-button'>"New Quote" </button>
         </div>
       </div>
